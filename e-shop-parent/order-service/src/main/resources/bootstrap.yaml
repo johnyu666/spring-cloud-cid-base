@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        shared-configs:
+          - dataId: commons

@@ -1,0 +1,11 @@
+### 查询一个帐户
+GET http://localhost:3600/accounts/1
+Accept: application/json
+
+### 修改帐户余额
+POST http://localhost:3600/reduceBalance
+Content-Type: application/x-www-form-urlencoded
+
+aid=1&balance=1
+
+###

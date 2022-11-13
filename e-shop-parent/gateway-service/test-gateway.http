@@ -1,0 +1,4 @@
+GET http://localhost:9000/order-service/orders/2
+Accept: application/json
+
+###

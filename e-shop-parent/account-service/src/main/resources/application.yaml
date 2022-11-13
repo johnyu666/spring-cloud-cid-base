@@ -1,0 +1,6 @@
+database: x_account
+spring:
+  application:
+    name: account-service
+server:
+  port: 3600

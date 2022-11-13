@@ -1,0 +1,19 @@
+database: x_order
+server:
+  port: 4000
+
+feign:
+  client:
+    config:
+      product-service:
+      #        1秒是默认值，超时会在Feign的代理Service中抛出异常
+        connectTimeout: 1000
+        readTimeout: 1000
+
+
+product-service:
+  ribbon:
+    ServerListRefreshInterval: 2000 # ribbon的调用缓存时间，每2秒刷新一次
+    #    负载均衡策略
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #配置规则 随机
+    # NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule #配置规则 轮询
