@@ -12,3 +12,7 @@ spring:
         extension-configs:
           - dataId: datasource
             fileExtension: yaml
+          - dataId: sentinel
+            fileExtension: yaml
+          - dataId: zipkin
+            fileExtension: yaml

@@ -12,5 +12,10 @@ spring:
         namespace: dev
         dataId: gateway-service
         file-extension: yaml
+        extension-configs:
+          - dataId: sentinel
+            fileExtension: yaml
+          - dataId: zipkin
+            fileExtension: yaml
 
 
