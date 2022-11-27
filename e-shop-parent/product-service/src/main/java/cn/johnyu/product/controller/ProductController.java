@@ -2,7 +2,7 @@ package cn.johnyu.product.controller;
 
 import cn.johnyu.commons.dto.ProductDto;
 import cn.johnyu.product.mapper.ProductDao;
-import com.baomidou.dynamic.datasource.annotation.DS;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,12 +14,12 @@ import java.lang.management.RuntimeMXBean;
 @RestController
 public class ProductController {
     @Autowired private ProductDao productDao;
-    @DS(value = "master")
+
     @PostMapping(value = "/reduceStock")
     public int reduceStock(int pid,int stock){
         return productDao.reduceStock(pid,stock);
     }
-    @DS(value = "slave")
+
     @GetMapping(value = "/products/{pid}")
     public ProductDto loadProduct(@PathVariable("pid") int pid){
         if(pid==0){

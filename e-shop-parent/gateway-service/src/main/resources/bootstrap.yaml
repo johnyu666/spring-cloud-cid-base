@@ -1,6 +1,7 @@
 spring:
   application:
-    name: account-service
+    name: gateway-service
+
   cloud:
     nacos:
       discovery:
@@ -9,6 +10,7 @@ spring:
       config:
         server-addr: ${NACOS_ADDR:localhost:8848}
         namespace: dev
-        extension-configs:
-          - dataId: datasource
-            fileExtension: yaml
+        dataId: gateway-service
+        file-extension: yaml
+
+
